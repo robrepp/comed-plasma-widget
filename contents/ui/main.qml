@@ -140,8 +140,9 @@ PlasmoidItem {
                 // Bottom Row: Bar Chart
                 RowLayout {
                     Layout.fillWidth: true
-                    Layout.preferredHeight: 30
+                    Layout.preferredHeight: 40 // Give it some room
                     spacing: 4
+                    Layout.alignment: Qt.AlignBottom // Align the whole row to bottom
                     
                     Repeater {
                         model: root.historyData
@@ -149,9 +150,28 @@ PlasmoidItem {
                         delegate: ColumnLayout {
                             spacing: 2
                             Layout.fillWidth: true
-                            Layout.alignment: Qt.AlignBottom
+                            Layout.alignment: Qt.AlignBottom // Bars grow from bottom
                             
-                            // Bar Label
+                            // Bar (Top)
+                            Rectangle {
+                                property double maxPrice: 20.0
+                                property double minHeight: 4.0
+                                property double maxHeight: 28.0 // Max bar height
+                                
+                                Layout.fillWidth: true
+                                // Use Layout.preferredHeight for dynamic sizing in Layouts
+                                Layout.preferredHeight: {
+                                    var val = modelData.price
+                                    var norm = Math.min(val / maxPrice, 1.0)
+                                    return minHeight + (maxHeight - minHeight) * norm
+                                }
+                                
+                                color: "black"
+                                opacity: 0.3
+                                radius: 2
+                            }
+
+                            // Bar Label (Bottom)
                             Text {
                                 text: modelData.price.toFixed(1)
                                 font.pixelSize: 9
@@ -159,25 +179,6 @@ PlasmoidItem {
                                 color: "white"
                                 opacity: 0.8
                                 Layout.alignment: Qt.AlignCenter
-                            }
-                            
-                            // Bar
-                            Rectangle {
-                                property double maxPrice: 20.0
-                                property double minHeight: 4.0
-                                property double maxHeight: 24.0
-                                
-                                // Calculate height
-                                height: {
-                                    var val = modelData.price
-                                    var norm = Math.min(val / maxPrice, 1.0)
-                                    return minHeight + (maxHeight - minHeight) * norm
-                                }
-                                
-                                width: parent.width
-                                color: "black"
-                                opacity: 0.3
-                                radius: 2
                             }
                         }
                     }
