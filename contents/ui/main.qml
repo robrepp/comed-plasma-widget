@@ -39,9 +39,9 @@ PlasmoidItem {
     
     fullRepresentation: Item {
         Layout.preferredWidth: 300
-        Layout.preferredHeight: 150
+        Layout.preferredHeight: 160 // Increased height slightly to prevent clipping
         Layout.minimumWidth: 200
-        Layout.minimumHeight: 100
+        Layout.minimumHeight: 120
         
         Rectangle {
             anchors.fill: parent
@@ -51,8 +51,8 @@ PlasmoidItem {
             // Main Content Container
             ColumnLayout {
                 anchors.fill: parent
-                anchors.margins: 16
-                spacing: 12
+                anchors.margins: 12 // Reduced margins to give content more room
+                spacing: 8 // Reduced spacing to pull elements together
                 
                 // Top Row: Price Info (Left) vs Tier/Time (Right)
                 RowLayout {
@@ -140,9 +140,9 @@ PlasmoidItem {
                 // Bottom Row: Bar Chart
                 RowLayout {
                     Layout.fillWidth: true
-                    Layout.preferredHeight: 40 // Give it some room
+                    Layout.preferredHeight: 45 // Fixed height for chart area
                     spacing: 4
-                    Layout.alignment: Qt.AlignBottom // Align the whole row to bottom
+                    Layout.alignment: Qt.AlignBottom
                     
                     Repeater {
                         model: root.historyData
@@ -150,16 +150,15 @@ PlasmoidItem {
                         delegate: ColumnLayout {
                             spacing: 2
                             Layout.fillWidth: true
-                            Layout.alignment: Qt.AlignBottom // Bars grow from bottom
+                            Layout.alignment: Qt.AlignBottom
                             
                             // Bar (Top)
                             Rectangle {
                                 property double maxPrice: 20.0
                                 property double minHeight: 4.0
-                                property double maxHeight: 28.0 // Max bar height
+                                property double maxHeight: 28.0 
                                 
                                 Layout.fillWidth: true
-                                // Use Layout.preferredHeight for dynamic sizing in Layouts
                                 Layout.preferredHeight: {
                                     var val = modelData.price
                                     var norm = Math.min(val / maxPrice, 1.0)
