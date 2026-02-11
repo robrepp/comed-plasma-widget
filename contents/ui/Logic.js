@@ -46,7 +46,7 @@ function processReadings(readings) {
         var newest = parsePrice(readings[0]);
         var oldest = parsePrice(readings[3]); 
         var diff = newest - oldest;
-        if (diff > 0.5) trend = "↗";     // Using simple unicode arrows
+        if (diff > 0.5) trend = "↗";
         else if (diff < -0.5) trend = "↘";
     }
 
