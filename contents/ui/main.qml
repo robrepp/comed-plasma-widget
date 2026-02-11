@@ -1,7 +1,6 @@
 import QtQuick
 import QtQuick.Layouts
 import org.kde.plasma.plasmoid
-import org.kde.plasma.components 3.0 as PlasmaComponents
 import "Logic.js" as Logic
 
 Item {
