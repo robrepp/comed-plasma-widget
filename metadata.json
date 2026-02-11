@@ -1,24 +1,19 @@
 {
     "KPlugin": {
-        "Authors": [
-            {
-                "Email": "robrepp@winnetka36.org",
-                "Name": "Rob Repp"
-            }
-        ],
-        "Category": "Utilities",
-        "Description": "ComEd Hourly Price Monitor - Medium Widget Style",
-        "Icon": "battery-charging",
         "Id": "org.robrepp.comedprice",
         "Name": "ComEd Price",
-        "Version": "1.0.5",
+        "Description": "ComEd Price Monitor",
+        "Authors": [
+            {
+                "Name": "Rob Repp",
+                "Email": "robrepp@winnetka36.org"
+            }
+        ],
+        "Icon": "battery-charging",
+        "Version": "1.0.6",
         "License": "MIT",
-        "Website": "https://github.com/robrepp",
-        "ServiceTypes": [
-            "Plasma/Applet"
-        ]
+        "Website": "https://github.com/robrepp/comed-plasma-widget"
     },
-    "KPackageStructure": "Plasma/Applet",
     "X-Plasma-API": "declarativeappletscript",
     "X-Plasma-MainScript": "ui/main.qml"
 }
