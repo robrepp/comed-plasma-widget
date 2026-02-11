@@ -11,9 +11,10 @@
         "Icon": "battery-charging",
         "Id": "org.robrepp.comedprice",
         "Name": "ComEd Price",
-        "Version": "1.0.3",
+        "Version": "1.0.4",
         "License": "MIT",
-        "Website": "https://github.com/robrepp"
+        "Website": "https://github.com/robrepp",
+        "ServiceTypes": [ "Plasma/Applet" ]
     },
     "KPackageStructure": "Plasma/Applet",
     "X-Plasma-API": "declarativeappletscript"
