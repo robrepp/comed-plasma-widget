@@ -1,0 +1,18 @@
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "robrepp@winnetka36.org",
+                "Name": "Rob Repp"
+            }
+        ],
+        "Category": "Utilities",
+        "Description": "ComEd Hourly Price Monitor - Medium Widget Style",
+        "Icon": "battery-charging",
+        "Id": "org.robrepp.comedprice",
+        "Name": "ComEd Price",
+        "Version": "1.0",
+        "Website": "https://github.com/robrepp"
+    },
+    "KPackageStructure": "Plasma/Applet"
+}
