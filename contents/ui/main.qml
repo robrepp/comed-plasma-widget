@@ -39,7 +39,7 @@ PlasmoidItem {
     
     fullRepresentation: Item {
         Layout.preferredWidth: 300
-        Layout.preferredHeight: 160 // Increased height slightly to prevent clipping
+        Layout.preferredHeight: 160
         Layout.minimumWidth: 200
         Layout.minimumHeight: 120
         
@@ -51,8 +51,8 @@ PlasmoidItem {
             // Main Content Container
             ColumnLayout {
                 anchors.fill: parent
-                anchors.margins: 12 // Reduced margins to give content more room
-                spacing: 8 // Reduced spacing to pull elements together
+                anchors.margins: 12 
+                spacing: 4 // Reduced spacing further to pull elements together
                 
                 // Top Row: Price Info (Left) vs Tier/Time (Right)
                 RowLayout {
@@ -140,7 +140,7 @@ PlasmoidItem {
                 // Bottom Row: Bar Chart
                 RowLayout {
                     Layout.fillWidth: true
-                    Layout.preferredHeight: 45 // Fixed height for chart area
+                    Layout.preferredHeight: 40 // Reduced chart height to make room for labels
                     spacing: 4
                     Layout.alignment: Qt.AlignBottom
                     
