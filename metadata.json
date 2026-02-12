@@ -10,12 +10,12 @@
             }
         ],
         "Icon": "battery-charging",
-        "Version": "1.0.15",
+        "Version": "1.0.16",
         "License": "MIT",
-        "Website": "https://github.com/robrepp/comed-plasma-widget",
-        "X-Plasma-API-Minimum-Version": "6.0"
+        "Website": "https://github.com/robrepp/comed-plasma-widget"
     },
     "KPackageStructure": "Plasma/Applet",
     "X-Plasma-API": "declarativeappletscript",
-    "X-Plasma-MainScript": "ui/main.qml"
+    "X-Plasma-MainScript": "ui/main.qml",
+    "X-Plasma-API-Minimum-Version": "6.0"
 }
