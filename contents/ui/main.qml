@@ -1,11 +1,13 @@
 import QtQuick
 import QtQuick.Layouts
 import org.kde.plasma.plasmoid
+import org.kde.plasma.core as PlasmaCore
 import "Logic.js" as Logic
 
 PlasmoidItem {
     id: root
-    
+    Plasmoid.backgroundHints: PlasmaCore.Types.NoBackground
+
     // Properties to hold data
     property string priceStr: "--"
     property string trendStr: ""
