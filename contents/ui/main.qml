@@ -49,6 +49,12 @@ PlasmoidItem {
             anchors.fill: parent
             color: root.tierColor
             radius: 16 // iOS-like rounded corners
+
+            MouseArea {
+                anchors.fill: parent
+                cursorShape: Qt.PointingHandCursor
+                onClicked: Qt.openUrlExternally("https://hourlypricing.comed.com/live-prices/")
+            }
             
             // Main Content Container
             ColumnLayout {
